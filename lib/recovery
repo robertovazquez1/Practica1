@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+
+class MyHomePage extends StatelessWidget {
+  final String title;
+  const MyHomePage({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: const Color(0xfffff8ff),
+        appBar: AppBar(
+          // The title text which will be shown on the action bar
+          title: Text(title),
+        ),
+        body: Stack(
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.deepPurple,
+              child: Text('Roberto',
+                  style: TextStyle(
+                    color: Colors.yellow,
+                    fontSize: 40,
+                  )),
+            ),
+            Positioned(
+                top: 120,
+                left: 120,
+                child: Container(
+                  color: Colors.yellow,
+                  width: 79,
+                  height: 79,
+                  child: Text('Vazquez',
+                      style: TextStyle(
+                          color: Colors.deepPurple,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold)),
+                )),
+          ],
+        ));
+  }
+}
